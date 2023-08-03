@@ -24,6 +24,9 @@ app.use(
   })
 );
 app.use("/", Routes);
+app.get("/",(req,res)=>{
+  res.json("Dashboard Backend Page Api/")
+})
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running   Successfully on PORT: ${process.env.PORT}`);
