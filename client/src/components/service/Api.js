@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "https://mern-dashboard-nine.vercel.app/";
+const URL = "https://mern-dashboard-nine.vercel.app";
 const addHotel = async (data) => {
   try {
     return await axios.post(`${URL}/addHotel`, data);
