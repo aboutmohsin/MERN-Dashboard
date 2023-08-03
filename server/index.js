@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // CORS
 app.use(
   cors({
-    origin: "https://mern-dashboard-frontend-three.vercel.app/",
+    origin: "*",
     methods: ["GET,POST,PUT,DELETE"],
     credentials: true,
   })
