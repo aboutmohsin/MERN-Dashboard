@@ -1,6 +1,7 @@
 import Hotels from "../model/hotel-schema.js";
 
 export const addHotel = async (req, res) => {
+ res.set('Access-Control-Allow-Origin', '*');
   const hotel = req.body;
   const newHotel = Hotels(hotel);
   console.log(newHotel);
@@ -13,6 +14,7 @@ export const addHotel = async (req, res) => {
   }
 };
 export const getHotels = async (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*');
   try {
     const hotel = await Hotels.find({});
     res.status(200).json(hotel);
@@ -21,6 +23,7 @@ export const getHotels = async (req, res) => {
   }
 };
 export const getHotel = async (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*');
   try {
     const hotel = await Hotels.findById(req.params.id);
     res.status(200).json(hotel);
@@ -28,6 +31,7 @@ export const getHotel = async (req, res) => {
 };
 
 export const editHotel = async (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*');
   let hotel = req.body;
   const editHotel = new Hotels(hotel);
   try {
@@ -38,6 +42,7 @@ export const editHotel = async (req, res) => {
   }
 };
 export const deleteHotel = async (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*');
   // console.log(req.params.id);
   try {
     await Hotels.deleteOne({ _id: req.params.id });
