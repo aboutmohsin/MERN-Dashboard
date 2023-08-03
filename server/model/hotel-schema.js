@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import autoIncrement from "mongoose-auto-increment";
+// import autoIncrement from "mongoose-auto-increment";
 
 const hotelSchema = mongoose.Schema({
   hotelname: String,
@@ -10,8 +10,8 @@ const hotelSchema = mongoose.Schema({
   postalcode: String,
   price: String,
 });
-autoIncrement.initialize(mongoose.connection);
-hotelSchema.plugin(autoIncrement.plugin, "hotel");
+// autoIncrement.initialize(mongoose.connection);
+// hotelSchema.plugin(autoIncrement.plugin, "hotel");
 const Hotel = mongoose.model("hotel", hotelSchema);
 
 export default Hotel;

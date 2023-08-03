@@ -14,26 +14,26 @@ const SideBar = () => {
           </div>
         </div>
         <div className="sidebar">
-          <Link href="/" className="active">
+          <a href="/" className="active">
             <span className="material-symbols-sharp active"> grid_view </span>
             <h3>dashboard</h3>
-          </Link>
-          <Link href="/addHotel">
+          </a>
+          <a href="/addHotel">
             <span className="material-symbols-sharp">hotel</span>
             <h3>Add Hotel</h3>
-          </Link>
-          <Link href="/listHotel">
+          </a>
+          <a href="/listHotel">
             <span className="material-symbols-sharp">king_bed</span>
             <h3>Listed Hotel</h3>
-          </Link>
-          <Link href="#form">
+          </a>
+          <a href="#form">
             <span className="material-symbols-sharp">feed</span>
             <h3>Form</h3>
-          </Link>
-          <Link href="#">
+          </a>
+          <a href="#">
             <span className="material-symbols-sharp">logout</span>
             <h3>Logout</h3>
-          </Link>
+          </a>
         </div>
       </aside>
     </>
