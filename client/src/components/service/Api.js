@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const URL = "https://mern-dashboard-nine.vercel.app";
-const addHotel = async (data,req,res) => {
-    res.set('Access-Control-Allow-Origin', '*');
+const addHotel = async (data) => {
+    
   try {
     return await axios.post(`${URL}/addHotel`, data);
   } catch (error) {
@@ -10,16 +10,16 @@ const addHotel = async (data,req,res) => {
   }
 };
 
-const getHotels = async (req,res) => {
-    res.set('Access-Control-Allow-Origin', '*');
+const getHotels = async () => {
+    
   try {
     return await axios.get(`${URL}/listHotel`);
   } catch (error) {
     console.log("Error while calling listHotel API:", error);
   }
 };
-const getHotel = async (id,req,res) => {
-    res.set('Access-Control-Allow-Origin', '*');
+const getHotel = async (id) => {
+    
   try {
     return await axios.get(`${URL}/${id}`);
   } catch (error) {
@@ -27,16 +27,16 @@ const getHotel = async (id,req,res) => {
   }
 };
 
-const editHotel = async (input, id,req,res) => {
-    res.set('Access-Control-Allow-Origin', '*');
+const editHotel = async (input, id) => {
+    
   try {
     return axios.put(`${URL}/${id}`, input);
   } catch (error) {
     console.log("Error while calling editHotel API:", error);
   }
 };
-const deleteHotel = async (id,req,res) => {
-    res.set('Access-Control-Allow-Origin', '*');
+const deleteHotel = async (id) => {
+    
   try {
     // return console.log((`${URL}/${id}`));
     return await axios.delete(`${URL}/${id}`);
