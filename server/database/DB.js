@@ -5,7 +5,7 @@ const Connection = async () => {
     console.log("Try to  Connect Database");
   
   try {
-    await mongoose.connect(process.env.DB, {
+    await mongoose.connect("mongodb+srv://merndashboard:merndashboard@cluster0.9saifng.mongodb.net/", {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
